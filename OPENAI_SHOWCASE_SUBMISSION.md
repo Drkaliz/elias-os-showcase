@@ -51,7 +51,9 @@ Node.js 20+, JavaScript ES modules, Node's built-in test runner, Markdown docume
 
 ## 11. OpenAI Products, Models, and APIs Used
 
-Codex was used for development and repository preparation. The showcase runtime does not call an OpenAI model or API and does not require an API key.
+Codex was used for development and repository preparation. The default deterministic showcase runtime does not call an OpenAI model or API. An optional `LIVE_OPENAI` mode uses the official OpenAI JavaScript SDK and Responses API with `gpt-5.6-sol` as the default model. It requires `OPENAI_API_KEY` from the process environment and has not been real-API smoke-tested for this release unless separately verified by the owner.
+
+Optional OpenAI Responses API mode implemented and covered by automated mocked tests. Real API smoke test pending billing activation.
 
 ## 12. How Codex Was Used
 
@@ -84,19 +86,41 @@ node demo/elias-demo.js
 npm test
 ```
 
+Optional live mode:
+
+Windows PowerShell:
+
+```powershell
+$env:OPENAI_API_KEY="your-key-here"
+npm run demo:live
+Remove-Item Env:OPENAI_API_KEY
+```
+
+macOS/Linux:
+
+```bash
+export OPENAI_API_KEY="your-key-here"
+npm run demo:live
+unset OPENAI_API_KEY
+```
+
+Live mode is optional and never replaces the deterministic reviewer path.
+
 ## 18. Demo Explanation
 
-The demo runs a local request through governance, approved mock knowledge lookup, conflict detection, a required human review gate, verification, self-audit, and audit-trail generation. It ends with `READY_FOR_HUMAN_REVIEW`; it does not approve changes.
+The default demo runs a local request through governance, approved mock knowledge lookup, conflict detection, a required human review gate, verification, self-audit, and audit-trail generation. It ends with `READY_FOR_HUMAN_REVIEW`; it does not approve changes. The optional live demo sends a clearly delimited request and approved showcase governance context to the Responses API, validates the structured result, labels it `LIVE_OPENAI`, and also ends at `READY_FOR_HUMAN_REVIEW`.
+
+The live model output is advisory evidence only. It cannot authorize actions or modify rules, knowledge, registries, files, or governance records. Elias OS remains the governance and authorization layer.
 
 ## 19. Test Results
 
-`npm test` passed with 6 tests, 0 failures, 0 skipped, and 0 cancellations.
+`npm test` passed with 14 tests, 0 failures, 0 skipped, and 0 cancellations.
 
 Covered behavior includes approval-required actions, conflict detection, rule priority, audit-trail generation, rejection of unapproved actions, and rejection of missing evidence.
 
 ## 20. Security and Privacy Approach
 
-The showcase is local and deterministic. It does not call external services, read files outside the repository, process Inbox files, store credentials, or include personal data, browser data, backups, logs, ZIP archives, or unrelated projects.
+The default showcase is local and deterministic. Optional live mode requires an explicit environment key, sends no repository files or personal data, and never stores or prints the key. The repository contains no real key. The live integration has not been real-API smoke-tested for this release unless separately verified by the owner.
 
 ## 21. Known Limitations
 
@@ -106,6 +130,8 @@ The showcase is local and deterministic. It does not call external services, rea
 - Verification is deterministic and simulated.
 - Does not process production datasets or Inbox files.
 - Does not implement automatic rule promotion, prompt export generation, or external model access.
+- Live mode is optional and depends on network access, account authorization, model availability, rate limits, and a valid API key.
+- Automated tests mock the SDK and do not prove live service availability.
 
 ## 22. Author
 
@@ -123,7 +149,7 @@ Human media placeholder:
 - 5-12s: Introduce the problem: AI can agree without evidence or bypass review.
 - 12-22s: Run the demo and show the request moving through governance, knowledge lookup, and conflict detection.
 - 22-30s: Highlight the required human review gate and verification result.
-- 30-38s: Show the audit trail and test result: 6 passing tests.
+- 30-38s: Show the audit trail and test result: 14 passing tests.
 - 38-45s: State the limitation: this is a deterministic showcase prototype, not a production autonomous system.
 
 ## 25. Human-Only Submission Fields

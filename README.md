@@ -10,6 +10,36 @@ This repository is a small, deterministic showcase. It demonstrates the governan
 node demo/elias-demo.js
 ```
 
+This deterministic showcase mode is the default reviewer path. It works without internet access, API keys, environment variables, accounts, or external services.
+
+## Optional Live OpenAI Mode
+
+Live mode is optional and separate from the deterministic demo. It sends only the explicit request and approved showcase governance context to the OpenAI Responses API. It does not send repository files, personal data, or machine paths.
+
+Windows PowerShell:
+
+```powershell
+$env:OPENAI_API_KEY="your-key-here"
+npm run demo:live
+Remove-Item Env:OPENAI_API_KEY
+```
+
+macOS/Linux:
+
+```bash
+export OPENAI_API_KEY="your-key-here"
+npm run demo:live
+unset OPENAI_API_KEY
+```
+
+The default live model is `gpt-5.6-sol`; set `OPENAI_MODEL` to use another permitted model. Live output is advisory evidence only, is labeled `LIVE_OPENAI`, and always stops at `READY_FOR_HUMAN_REVIEW`.
+
+The model cannot authorize actions or modify rules, knowledge, registries, files, or governance records. Elias OS remains the governance and authorization layer.
+
+Optional OpenAI Responses API mode implemented and covered by automated mocked tests. Real API smoke test pending billing activation.
+
+If live mode fails, it reports the failure without silently using deterministic output. Run `node demo/elias-demo.js` explicitly for the deterministic path.
+
 ## Test
 
 ```text
@@ -28,6 +58,7 @@ This is `Elias OS — Build Week Showcase Edition` version `0.1.0-showcase`. It 
 - `06_Knowledge/`: approved IPTS reference examples only.
 - `demo/`: deterministic local demonstration.
 - `test/`: executable tests for the demo.
+- `demo/live-analysis.js`: optional Responses API analysis and structured-output validation.
 
 ## Safety
 

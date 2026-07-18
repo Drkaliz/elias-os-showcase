@@ -117,6 +117,7 @@ export function runDemo(request = {}) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const result = runDemo();
   console.log(JSON.stringify({
+    mode: 'DETERMINISTIC_SHOWCASE',
     showcase: true,
     simulated: true,
     sourceRoot: './',
