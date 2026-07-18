@@ -1,0 +1,14 @@
+{
+  "name": "elias-os-build-week-showcase",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Elias OS — Build Week Showcase Edition: deterministic governance and review-gate demo.",
+  "type": "module",
+  "scripts": {
+    "demo": "node demo/elias-demo.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

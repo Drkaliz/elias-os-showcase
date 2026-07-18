@@ -1,0 +1,44 @@
+# Dependencies and generated test output
+node_modules/
+coverage/
+*.log
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+tokens.*
+
+# Private and unrelated artifacts
+*.zip
+*.7z
+*.rar
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.csv
+*.sqlite
+*.db
+private/
+personal/
+backups/
+browser-data/
+tmp/
+temp/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Showcase output that is not source authority
+demo-output.json
