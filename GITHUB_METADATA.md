@@ -1,16 +1,34 @@
-# GitHub Metadata Draft
+# GitHub Metadata
 
 Repository name: `elias-os-showcase`
 
-Description: Elias OS — Build Week Showcase Edition: governed AI instruction system showcase demonstrating evidence boundaries, conflict detection, human review gates, verification, and audit trails.
+Description: Governed AI instruction architecture with evidence checks, conflict detection, human review, verification, and auditable outcomes.
 
-Suggested topics:
+Topics:
 
+- elias-os
 - ai-governance
-- prompt-engineering
 - human-in-the-loop
-- verification
-- knowledge-management
-- build-week
+- auditability
+- ai-safety
+- codex
+- nodejs
+- developer-tools
 
-Publication status: Not published. Repository description and topics require explicit owner approval and a clean repository review.
+Owner publication approval: Granted.
+
+Clean-clone acceptance test: Passed.
+
+Demo: Passed.
+
+Tests: 6 passed, 0 failed.
+
+Security scan: Passed.
+
+Visibility: Public.
+
+Repository URL: https://github.com/Drkaliz/elias-os-showcase
+
+Edition: Elias OS - Build Week Showcase Edition.
+
+Production status: Showcase prototype, not production-ready.

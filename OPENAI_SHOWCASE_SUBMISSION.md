@@ -1,31 +1,137 @@
-# OpenAI Build Week Showcase Draft
+# OpenAI Build Week Showcase Submission
 
-## Title
+## 1. Project Title
 
-Elias OS — Build Week Showcase Edition
+Elias OS - Build Week Showcase Edition
 
-## One-Line Summary
+## 2. Tagline
 
-A governed instruction system that makes evidence, conflict detection, human review, and auditability visible before an AI action is treated as authorized.
+Evidence before agreement. Human review before authorization.
 
-## Demonstration
+## 3. Short Description
 
-Run `node demo/elias-demo.js` to see a deterministic request move through governance, approved mock knowledge lookup, conflict detection, the human review gate, verification, self-audit, and an audit trail.
+A deterministic showcase of a governed AI instruction system that checks evidence, conflicts, verification, uncertainty, and human approval before an action is treated as authorized.
 
-## What Is Real
+## 4. Full Project Description
 
-- The demo code executes locally.
-- The tests execute locally.
-- The included architecture and governance documents are curated from approved Elias records.
-- Unsafe, unapproved, and conflicting paths are blocked in the demo.
+Elias OS is a modular governance architecture for improving AI reasoning discipline and reducing yes-man behavior. This Build Week Showcase Edition demonstrates a local request flow through governance checks, approved mock knowledge lookup, conflict detection, human review, verification, self-audit, and audit-trail generation.
 
-## What Is Simulated
+## 5. Problem Being Solved
 
-- Knowledge lookup uses local mock records.
-- Verification is deterministic and local.
-- No external model or API is called.
-- No production dataset is processed.
+AI systems can agree without evidence, apply conflicting instructions, hide uncertainty, or make changes without accountable review. Elias OS defines explicit boundaries for evidence, authority, verification, and human approval.
 
-## Honest Limitation
+## 6. Target Users
 
-This edition is a showcase prototype, not a production-ready autonomous system. It does not implement the full Elias runtime or automatic rule promotion.
+AI application builders, technical teams designing governed instruction systems, architecture reviewers, and organizations requiring traceable human-in-the-loop workflows.
+
+## 7. Main Use Cases
+
+- Review an AI-related request against governance boundaries.
+- Look up approved knowledge.
+- Detect priority conflicts.
+- Require human review for protected actions.
+- Verify evidence and scope.
+- Produce an auditable result.
+
+## 8. Capabilities Demonstrated
+
+User intake, governance checking, knowledge lookup, conflict detection, human review gating, evidence verification, self-audit, uncertainty communication, and audit-trail output.
+
+## 9. Technical Architecture
+
+The showcase implements a deterministic slice of the Elias flow:
+
+`Input -> Governance -> Knowledge Lookup -> Conflict Detection -> Human Review Gate -> Verification -> Self Audit -> Audit Trail`
+
+The output remains a review result and does not authorize operational changes.
+
+## 10. Tech Stack
+
+Node.js 20+, JavaScript ES modules, Node's built-in test runner, Markdown documentation, and local deterministic mock data.
+
+## 11. OpenAI Products, Models, and APIs Used
+
+Codex was used for development and repository preparation. The showcase runtime does not call an OpenAI model or API and does not require an API key.
+
+## 12. How Codex Was Used
+
+Codex helped structure the architecture, curate the showcase repository, implement the deterministic demo, create executable tests, perform repository safety checks, and prepare the documentation.
+
+## 13. How the Project Was Built
+
+The project was built from the approved Elias architecture and governance documentation. Only curated architecture, governance, schema, knowledge examples, approved review records, demo code, and tests were included.
+
+## 14. Project Origin Story and Timeline
+
+Elias OS began as an architecture-first effort to prevent unverified agreement and uncontrolled rule changes. The project progressed through architecture, foundation, knowledge governance, experience tracking, cognitive architecture, runtime flow, pilot intake, production-readiness review, and showcase preparation. The current public repository is the Build Week Showcase Edition, not the complete Elias runtime.
+
+## 15. Why the Project Is Different
+
+It treats governance, evidence boundaries, human review, verification, and self-audit as explicit stages before authorization. The showcase also clearly separates executable behavior from simulated components.
+
+## 16. GitHub Repository URL
+
+https://github.com/Drkaliz/elias-os-showcase
+
+## 17. Setup and Run Instructions
+
+Requirements: Node.js 20 or newer.
+
+```bash
+git clone https://github.com/Drkaliz/elias-os-showcase.git
+cd elias-os-showcase
+node demo/elias-demo.js
+npm test
+```
+
+## 18. Demo Explanation
+
+The demo runs a local request through governance, approved mock knowledge lookup, conflict detection, a required human review gate, verification, self-audit, and audit-trail generation. It ends with `READY_FOR_HUMAN_REVIEW`; it does not approve changes.
+
+## 19. Test Results
+
+`npm test` passed with 6 tests, 0 failures, 0 skipped, and 0 cancellations.
+
+Covered behavior includes approval-required actions, conflict detection, rule priority, audit-trail generation, rejection of unapproved actions, and rejection of missing evidence.
+
+## 20. Security and Privacy Approach
+
+The showcase is local and deterministic. It does not call external services, read files outside the repository, process Inbox files, store credentials, or include personal data, browser data, backups, logs, ZIP archives, or unrelated projects.
+
+## 21. Known Limitations
+
+- Not production-ready.
+- Does not implement the full Elias runtime.
+- Uses hard-coded mock knowledge.
+- Verification is deterministic and simulated.
+- Does not process production datasets or Inbox files.
+- Does not implement automatic rule promotion, prompt export generation, or external model access.
+
+## 22. Author
+
+Khalil Rizq
+
+## 23. Suggested Cover Image Concept
+
+Human input placeholder: Create a clean technical flow diagram showing a request passing through Evidence, Conflict Detection, Human Review, Verification, and Audit Trail gates. Label the visual clearly as a showcase architecture.
+
+## 24. Suggested 30-45 Second Video Narrative
+
+Human media placeholder:
+
+- 0-5s: Show the title, Elias OS - Build Week Showcase Edition.
+- 5-12s: Introduce the problem: AI can agree without evidence or bypass review.
+- 12-22s: Run the demo and show the request moving through governance, knowledge lookup, and conflict detection.
+- 22-30s: Highlight the required human review gate and verification result.
+- 30-38s: Show the audit trail and test result: 6 passing tests.
+- 38-45s: State the limitation: this is a deterministic showcase prototype, not a production autonomous system.
+
+## 25. Human-Only Submission Fields
+
+- Final author profile and contact details: `[HUMAN INPUT REQUIRED]`
+- Exact submission-form OpenAI attribution: `[HUMAN INPUT REQUIRED]`
+- Cover image upload: `[HUMAN MEDIA REQUIRED]`
+- Video upload or hosted video URL: `[HUMAN MEDIA REQUIRED]`
+- Final project category and tags: `[HUMAN INPUT REQUIRED]`
+- Rights confirmation for submitted media and repository content: `[HUMAN CONFIRMATION REQUIRED]`
+- Final submission consent and owner attestation: `[HUMAN CONFIRMATION REQUIRED]`

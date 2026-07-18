@@ -1,6 +1,6 @@
 # Elias OS Showcase Manifest
 
-Project: Elias OS — Build Week Showcase Edition
+Project: Elias OS - Build Week Showcase Edition
 
 Version: 0.1.0-showcase
 
@@ -18,4 +18,14 @@ Explicit exclusions: Inbox processing, automatic promotion, Core mutation, promp
 
 Test command: `npm test`
 
-Publication status: Not published.
+Publication status: Published.
+
+Visibility: Public.
+
+Repository URL: https://github.com/Drkaliz/elias-os-showcase
+
+Default branch: `main`
+
+Edition: Build Week Showcase Edition.
+
+Production limitation: This is a showcase prototype, not a production-ready autonomous system.
