@@ -4,6 +4,12 @@ Elias OS is a governed instruction system designed to reduce yes-man behavior, p
 
 This repository is a small, deterministic showcase. It demonstrates the governance path only. The demo uses local mock knowledge and does not call an external model, process Inbox files, generate prompts, or claim production readiness.
 
+## Showcase Video
+
+[![Watch the Elias OS Showcase Video](assets/showcase/elias-os-cover.jpg)](https://youtu.be/e3Y2Vine3jw)
+
+Watch the Elias OS — OpenAI Build Week Showcase video.
+
 ## Run
 
 ```text
